@@ -111,7 +111,7 @@ public class SortPanel extends JPanel implements AlgorithmDelegate
                                     //     of these curly brackets.
             {
                 Graphics g = myCanvas.getGraphics();
-                // clear the screen
+                // clear the canvas
                 g.setColor(getBackground());
                 g.fillRect(0, 0, getWidth(), getHeight());
 
