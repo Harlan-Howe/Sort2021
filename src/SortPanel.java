@@ -65,6 +65,17 @@ public class SortPanel extends JPanel implements AlgorithmDelegate
     public void paintComponent(Graphics g)
     {
         super.paintComponent(g);
+        if (dirtyCanvas)
+        {
+            // pause a moment to let visualizer catch up.
+            try
+            {
+                Thread.sleep(20);
+            }catch (InterruptedException iExp)
+            {
+                return;
+            }
+        }
         getCanvas();
         if (myCanvas == null)
             return;
