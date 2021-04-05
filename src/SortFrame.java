@@ -381,6 +381,7 @@ public class SortFrame extends JFrame implements ActionListener, ChangeListener
         {
             System.out.println("Resized window.");
             rightPanel.setDirtyCanvas();
+            rightPanel.resetTimer();
             rightPanel.visualizeData(currentArray);
             repaint();
         }

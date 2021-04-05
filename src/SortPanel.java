@@ -20,7 +20,7 @@ public class SortPanel extends JPanel implements AlgorithmDelegate
         dirtyCanvas = true;
         setBackground(Color.lightGray);
         this.myFrame = myFrame;
-        lastUpdate = new Date();
+        resetTimer();
         delay_ms = 1;
     }
 
@@ -160,5 +160,13 @@ public class SortPanel extends JPanel implements AlgorithmDelegate
         dirtyCanvas = true;
     }
 
+    /**
+     * override the lastUpdate timer, setting it to 1970, so the visualizer will run
+     * next time, regardless of last actual update.
+     */
+    public void resetTimer()
+    {
+        lastUpdate = new Date(0);
+    }
 
 }
